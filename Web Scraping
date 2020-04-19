@@ -1,0 +1,46 @@
+#web scraping
+#first import libraries
+
+import requests
+
+#specify url
+any_url = "....url....."
+link = requests.get(any_url).text
+print(link)
+
+#import beautifulSoup
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(link, 'lxml')
+print(soup)
+
+print(soup.prettify()) #prints in nested form
+
+#fetches inly title
+soup.title
+
+#by using HTML tags
+soup.a         #list all tags
+
+#lists all tags
+soup.find_all("a")
+
+#extract only links in page
+all_link = soup.find_all("a")
+for link in all_link
+print(link.get("href"))
+
+
+#extracts all information form table
+all_tables = soup.find_all("table")
+print(all_table)
+
+
+
+
+
+
+
+
+
+
+
